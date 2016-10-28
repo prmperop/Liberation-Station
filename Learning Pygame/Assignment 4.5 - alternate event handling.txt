@@ -1,0 +1,35 @@
+The way we looked at previously for event handling is... a little shitty, to be completely honest. Theres TWO ways to
+handle events with pygame. Theres the for loop we looked at, which is better for not missing a single input. This is
+needed for things like typing or text editors, where we need every single input. However, for games, its okay if we
+miss one or two for the sake of speed and stuff. The second way is to check what key is CURRENTLY pressed, and then do
+stuff based on that. We would want to do this to see what is pressed:
+
+VariableName = pygame.key.get_pressed()
+
+This will give you a massive list of every key on the keyboard, and if it is pressed or not. How do we use this? well,
+we would do:
+
+if VariableName[keyIndexNumber] == True:
+	do something
+
+We do this for every key we need to see if is checked. We only need to call pygame.key.get_pressed() once per frame, 
+which will do fine.
+
+The keyNumberIndex, as far as i can tell, must be found by yourself. If you feel ambitious, you can try to figure it
+out, but i figured these out:
+
+a = 97
+d = 100
+w = 119
+s = 115
+LeftArrow = 276
+RightArrow = 275
+UpArrow = 274
+DownArrow = 273
+SpaceBar = 32
+RightCtrl = 303
+Esc = 27
+
+ASSIGNMENT
+
+Change shit if you want

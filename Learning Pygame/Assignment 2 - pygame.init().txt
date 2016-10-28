@@ -1,0 +1,18 @@
+Now that we have a file, we need to use pygame in it. Pygame is a library, so we need to import it first.
+start with:
+
+import pygame
+
+Then, we need to initialize pygame. to do that, create the line:
+
+pygame.init()
+
+This initializes all of the parts of pygame. In bigger games, where resources are critical, we would initialize each
+module as we need them in order to save space, due to the fact that a lot of modules are initialized that we dont
+need (like the joystick). For now, its not critical. Look on www.pygame.org/docs to see how to initialize certain part
+and decide what you do and do not. (Do this later if you want)
+
+ASSIGNMENT:
+
+modify your file so that it imports and then initizalizes python. Then run it. (if it raises an error, pygame is 
+intalled incorrectly.)

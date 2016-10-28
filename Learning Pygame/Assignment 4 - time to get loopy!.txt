@@ -1,0 +1,25 @@
+This assignment is going to be a little bit longer, because the concept is a little larger. The first thing we 
+are going to talk about is game loops. If we run only one frame of our game, it would be a pretty bad game. So,
+we are going to start with a loop. We need to first assign a variable, which I usually call 'running', to True. 
+then, we create our 'while' loop. while running, we need to make something happen. We are actually going to call 
+another loop inside our loop (loopy!), but this time, its going to be a 'for' loop. Let's start out with making our
+game be able to close, so we need a loop that gets our inputs. Inputs are anything from key presses to mouse 
+movements to exits. What is an exit? That little 'x' in the top corner of this window is an exit. When we press it,
+it calls the exit function from this window. Our window doesn't have any specific function to call when we 'exit'.
+in order to start our inputs in our mapping, we pull the following:
+
+for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_a:
+            None
+
+I went a little ham on that one, but its pretty simple to understand. In this case, instead of KEYDOWN we would put
+QUIT, and then we would skip the key check. We could do a few things, such as quit our loop by setting running to 
+False or simply quit the window by calling 'quit()' We can put a few other things in the KEYDOWN spot, such as 
+MOUSEBUTTONDOWN, MOUSEBUTTONUP, KEYUP, or a bunch of joystick commands which i doubt i'll ever use. All of these 
+things can be found on pygame.org/docs, as well as a bunch of other stuff which includes syntax and stuff. It is
+well documented, but it can be overwhelming at first. 
+
+ASSIGNMENT:
+
+add a loop into your file that, when you press the exit button, quits the window.

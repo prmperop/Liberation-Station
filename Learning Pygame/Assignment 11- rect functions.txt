@@ -1,0 +1,9 @@
+pygame.Rect(0,0,0,0). This creates a class, from pygame. There are MANY useful things that this class can do. For 
+example, you can do:
+
+rectName - pygame.Rect(0,0,0,0)
+
+if rectName.collideRect(otherRectName) == True:
+	do shit
+
+look on pygame.org/docs to see other things it can do!

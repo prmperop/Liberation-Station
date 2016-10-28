@@ -1,0 +1,8 @@
+Our silly player can still run outside of the screen. lets stop that. In our update loop, we simply add a script
+that checks the location of the player and then, if it goes outside the screen, stop it from moving in that 
+direction. This may be a little complicated, but i think you can figure it out. There will be no cheat sheet. 
+Remember that all of the coordinates are based off of the top left of the player rect!
+
+ASSIGNMENT:
+
+stop the player from moving outside of the screen barriers.

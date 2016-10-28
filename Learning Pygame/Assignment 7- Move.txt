@@ -1,0 +1,15 @@
+Our rectangle isnt very exciting, is it? What if we moved it? We can do so with the command:
+
+pygame.Rect.move_ip(int,int)
+
+which will move our rectangle by the amount provided. This assignment will be harder!
+
+ASSIGNMENT:
+
+Make your rect a variable, if it isnt already. Add a loop to your file that makes it so when you press any of the 
+wasd keys, your rect moves in that direction. Rembember that 0,0 is the top left corner, and that your rectangle
+is drawn from the top left. 
+
+A file called 'CHEAT SHEET - 7' is located in the folder, which has a possible solution in it. Also, we only want 
+the rect to move a little bit, not constantly. That is harder to do, and i will show you how to do that in the next
+assignment/lesson thingeroo.

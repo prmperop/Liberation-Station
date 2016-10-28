@@ -1,0 +1,58 @@
+We have a screen now. unfortunately, our display doesnt do much. In fact, it doesnt do anything. we need to draw 
+to it, update it and clear it if we want to do anything. These are a lot simpler than they sound. in a game loop 
+(which we'll talk about later) we would call all of these inside the loop, because they need to be done every frame. 
+creating our screen is done outside the loop. to draw, we'll start with the easiest: drawing a rectangle, aka rect. 
+this is the syntax:
+
+pygame.draw.rect(screen, colour, rect)
+
+this starts a whole host of questions like: How do we create a rect? How do we use our screen? How do we choose a 
+colour? Well, those are all easy questions. first, we need to change a little bit of our screen code. Currently, 
+its not doing anything, and in order to do anything with it we need to assign it to a variable. This is simple.
+change the code from:
+
+pygame.display.set_mode(screensize)
+
+to:
+
+screen = pygame.display.set_mode(screensize)
+
+now we can actually utilize our screen as a variable. Next we need to choose a colour. Colours in pygame are used in
+rgb values inside of tuples, in that rgb order. This sounds a lot more complicated than it is. We first create a 
+tuple that has three parts that are integers, like this. (0,0,0) The first number is the 'r' value. if we want to 
+increase the amount of the red hue, we increase this number. The second is the green, and the third is the blue. 
+next is the hardest part: the rect. Here is the syntax for a rect:
+
+pygame.Rect(x,y,length,width)
+
+We can simply center a rect on a x,y value using:
+
+RectName = pygame.Rect(0,0,length,width)
+RectName.center = (x,y)
+
+remeber, we can assign this to a variable. So if this was a practical use:
+
+playerRect = pygame.Rect(100,100,25,25)
+
+pygame.draw.rect(screen, (100,100,100), playerRect)
+
+Next, we have to update the screen to show this rect. We can do this a few ways. One was is by calling 
+'pygame.display.flip()', which simply updates the entire screen. This has a few problems, not the least of which is 
+the lack of practicality. the next command, 'pygame.display.update()' does something similar, update the whole
+screen, but this time we can put stuff inside the brackets to say, 'only update this specific part' which saves 
+resources. This is called 'dirty rects' because it gets rid of a lot of the dirty rect animation. If we want the 
+screen to start out a different colour than black, we simply call screen.fill((255,255,255)) and then 
+pygame.display.update in order to fill the screen with white.
+
+We may wish to clear the screen every frame. we can do this by using the command:
+
+screen.fill((r,g,b))
+
+which will simply fill the screen with a solid colour. Remember, if we call this AFTER the rect drawing, it will
+draw over the rect, making the rect draw not appear. And we still have to update!
+
+
+ASSIGNMENT:
+
+in your game loop, draw a rectangle that is 150 pixels by 150 pixels. Draw it at 50, 50. If you define your rect,
+(as a variable) make sure to do it outside of the loop, or else it will be impossible to move later on.

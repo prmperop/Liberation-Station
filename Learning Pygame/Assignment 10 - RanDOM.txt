@@ -1,0 +1,17 @@
+In games, we need a lot of randomly generated things. We can do this with the random library in python:
+
+import random
+
+because we are already calling import pygame, we can actually do:
+
+import pygame, random
+
+and that will work just fine. In order to create a random number we call:
+
+random.randint(int,int)
+
+which will create a random number in between the two ints, including both endpoints. 
+
+ASSIGNMENT:
+
+There really is nothing to do but add random to your file, if you want.

@@ -1,0 +1,44 @@
+Currently, our player is simply a rect variable that moves a little bit. Truly, it leaves something to be desired.
+The first step to do this is to use classes. For the love of everything, use classes. Our player class needs to know
+a few things which i'm just going to list here. Obviously, in certain cases, other things are needed. In fact, im
+simply going to create the player code and then explain it to you:
+
+class Player(object):
+    def __init__(self,x,y):
+	self.rect = pygame.Rect(x,y,25,25)
+	self.colour = (100,100,100)
+	self.direction = [0,0]
+	self.speed = 5
+    def update(self,screen):
+	pygame.draw.rect(screen, (255,255,255), self.rect)
+	pygame.display.update(self.rect)
+	self.rect.move(self.direction[0] * self.speed, self.direction[1] * self.speed)
+	pygame.draw.rect(screen, self.colour, self.rect)
+	pygame.draw.rect(screen, (0,0,0), self.rect, 1)
+	pygame.display.update(self.rect)
+
+This player class jumps ahead a little bit, but i'll try to make it easy to understand. The first thing that may 
+confuse you is why we have a self.direction and self.speed. This is because when we move our rect, we want it to be
+all at once, continuously, until we release the button. We multiply our direction by our speed, how fast we want to
+go, and move the rect every frame. Instead of calling the move function on the player rect, we change the direction
+variable of the player when a key is pressed. when a key is released, which we can check by using pygame.KEYUP,
+we change the direction back to 0. Negative if we want to go closer to the top left, positive if we are going away 
+from it. The next thing is we are calling pygame.draw.rect a few times. One of them is to delete the rect we 
+currently have. The next is to draw our new rect where it moved, and then the last is to create a black border
+around the rect, to make it look cleaner. of course, this is not neccesarry. We also call pygame.display.update
+twice, with the rect location inside of it. This is, as mentioned previously, dirty rect animation. Better to start
+sooner before it becomes a bad habit.
+
+ASSIGNMENT:
+
+change, well, a lot of things. Create your player to a class, and change your moving script to modify direction.
+Make sure you assign a variable to the player (outside the loop) like this:
+
+player = Player(x,y)
+
+and make sure you call player.update inside the loop like this:
+
+player.update(screen)
+
+This assignment is aruably the hardest to understand. Its also SUPER IMPORTANT. if you dont get it, either talk to 
+coleton or to eric.

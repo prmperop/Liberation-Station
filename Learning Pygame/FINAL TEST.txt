@@ -1,0 +1,7 @@
+The moment of truth. It may not seem like it, but you now have all of the tools you need to create a simple game.
+This game will have the player in it, as well as another class that you choose what does. Time for some creativity!
+if you dont get an idea, talk to eric, he'll give you something. 
+
+ASSIGNMENT:
+
+Make a simple game!

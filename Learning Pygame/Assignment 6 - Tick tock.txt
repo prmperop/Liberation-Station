@@ -1,0 +1,15 @@
+Before we do anything with our rectangle, we need to define the FPS we want our game to run at. Otherwise, it will 
+run as fast as your computer can handle. This is again, very simple. First, outside of the loop, assign a variable
+that has the value of pygame.time.Clock(), like this:
+
+clock = pygame.time.Clock()
+
+Then, inside our loop we simply call:
+
+clock.tick(fps)
+
+with fps equal to the number of frames we want our game to run at. 60 is ideal.
+
+ASSIGNMENT:
+
+assign the FPS of your game to 60.

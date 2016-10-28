@@ -1,0 +1,33 @@
+Assignment 7 may be a little hard to complete. Just in case, i created a cheat sheet that follows only the ways
+that have been taught to you. try to do it on your own, but if you cant, heres one of the possible answers. 
+Reminder that you cannot simply copy and paste this code into IDLE because of how notepad handles spaces and tabs.
+This is intentional. you need to type it yourself in order to learn how to do it on your own.
+
+import pygame
+pygame.init
+
+screensize = (640,480)
+screen = pygame.display.set_mode(screensize)
+playerRect = pygame.Rect(150,150,50,50)
+running = True
+
+screen.fill((0,0,0))
+pygame.display.update()
+
+while Running:
+    for event in pygame.event.get():
+	if event.type == pygame.QUIT:
+	    quit()
+	if event.type == pygame.KEYDOWN:
+	    if event.key == pygame.K_w:
+		playerRect.move(0,-5)
+	    if event.key == pygame.K_s:
+		playerRect.move(0,5)
+	    if event.key == pygame.K_a:
+		playerRect.move(-5,0)
+	    if event.key == pygame.K_d:
+		playerRect.move(5,0)
+    screen.fill(255,255,255)
+    pygame.draw.rect(screen, (100,100,100), playerRect)
+    pygame.display.update()
+		

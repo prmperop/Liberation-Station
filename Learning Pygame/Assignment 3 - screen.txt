@@ -1,0 +1,22 @@
+Now that pygame is up and running, we need something for it to run IN. Like a window. The first thing we'll need is 
+something called a display. This thing is magic, it does a lot really really easily. we need a screensize first though.
+The generic size is 640,480, so we'll make that a variable, and it has to be inside a tuple. just to confirm:
+
+screensize = (640,480)
+
+is how it should look. Next is the harder part. In pygame, all of our display bits run off of the pygame.display
+module. however, it does more than just create a screen. It can do a bunch of stuff. the code to create a screen is:
+
+pygame.display.set_mode(screensize)
+
+OR
+
+pygame.display.set_mode((640,480))
+
+Notice both of them are still in a tuple. That is neccesarry. So why do we make it a variable? thats because when 
+something needs to key off of the screensize (spawning something in the middle of the screen, as an example) we 
+can make it something like 'screensize/2' instead of '320'. This is good if we want to change the screensize later.
+
+ASSIGNMENT:
+
+add the display lines to your file. You dont need to run it because it wont do anything.

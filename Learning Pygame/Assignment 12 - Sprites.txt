@@ -1,0 +1,25 @@
+You may have heard the word sprite. No, not the soda, a sprite is an image used in a game. The first thing i have to 
+explain is what a surface is. A surface is like a piece of paper that you can do shit on. There's one special surface:
+the surface that is created when we do:
+
+pygame.display.set_mode(screensize)
+
+This is like your poster paper. When we draw rects on, we are like glueing pieces of paper on our poster. When we 
+update the screen, we are like making the stuff visible. There are other ways to get our peices of paper on the poster,
+and what these papers are depends on how we make them. Now back to sprites. Whenever we initialize a sprite, we are
+creating a surface object. We do this by doing:
+
+spriteName = pygame.image.load('ImageName.png')
+spriteName.convert()
+
+the .convert isnt NEEDED, but it makes everything better by changing the pixel format. What does this mean? i dunno.
+just do it. Anyways, we cant to pygame.draw for this peice of paper. Instead, we can do:
+
+PosterPaperName.blit(spriteName, (x,y))
+
+WE STILL NEED TO UPDATE THIS STUFF!!!! It will not automatically update itself. A sprite cannot be used like a rect,
+so it's better to have an invisible rect under the sprite and use the rect to detect stuff like collision.
+
+ASSIGNMENT:
+
+update your player class to use sprites.

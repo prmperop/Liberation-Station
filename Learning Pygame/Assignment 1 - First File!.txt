@@ -1,0 +1,10 @@
+First things first, youll need to make yourself a file to code in!
+start by creating a new file (can be anything best to be a text document)
+save it as 'filename.py'
+in order to edit it, right click it and click 'Edit with IDLE'
+IDLE is an example of an IDE. IDE's are things that edit code. IDLE is the free one that comes with python.
+in order to run your code press F5 or, at the top, click run.
+
+ASSIGNMENT:
+
+create a file in python.
