@@ -10,7 +10,8 @@ class hero(object):
         self.Rmod = Rmod
         self.AMmod = Mmod
         self.Mmod = Mmod
+        self.spell = spell
         self.resist = resist
 """ARmod = alien ranged mod, Rmod = Ranged mod, AMmod = alien melee mod, Mmod = melee mod,
-spell is if they can cast spells or not resist = spell resistance,"""
+spell is if they can cast spells or not and would be a true or false thing, resist = spell resistance,"""
 #this is an idea I have on a character class
