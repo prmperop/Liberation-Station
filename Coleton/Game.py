@@ -5,4 +5,5 @@ class Enemy(object):
     def __init__(self,armor,speed,resist):
         self.armor = armor
         self.speed = speed
-        Self.resist = resist
+        self.resist = resist
+# resist = spell resist
