@@ -1,0 +1,18 @@
+import pygame
+pygame.init()
+
+class hero(object):
+    def __init__(self,armor,speed,punch,ABmod,Bmod,AMmod,Mod,spell,resist):
+        self.armor = armor
+        self.speed = speed
+        self.punch = punch
+        self.ABmod = ABmod
+        self.Bmod = Bmod
+        self.AMmod = AMod
+        self.Mmod = Mmod
+        self.spell = spell
+        self.resist = resist
+
+"""ABmod = alien balistic mod, Bmod = balistic mod, AMmod = Alien melee mod, Mmod = melee mod,
+spell = if they can cast spells/use staves and how good the are with them, resist = spell resistance"""
+#an idea on a character class
