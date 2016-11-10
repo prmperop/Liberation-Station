@@ -2,7 +2,8 @@ import pygame
 pygame.init()
 
 class Hero(object):
-    def __init__(self,armor,speed,punch,ABmod,Bmod,AMmod,Mod,spell,resist):
+    def __init__(self,health,armor,speed,punch,ABmod,Bmod,AMmod,Mod,spell,resist):
+        self.health = health
         self.armor = armor
         self.speed = speed
         self.punch = punch
