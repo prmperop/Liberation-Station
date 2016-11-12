@@ -13,6 +13,9 @@ class Hero(object):
         self.Mmod = Mmod
         self.spell = spell
         self.resist = resist
+        self.sprite = pygame.image.load('images\imageFileName.jpg')
+    def update(self,screen):
+        
 
 """ABmod = alien balistic mod, Bmod = balistic mod, AMmod = Alien melee mod, Mmod = melee mod,
 spell = if they can cast spells/use staves and how good the are with them, resist = spell resistance"""
