@@ -1,0 +1,15 @@
+import pygame
+pygame.init
+
+screensize = (640,480)
+screen = pygame.display.set_mode(screensize,pygame.RESIZABLE)
+
+while True:
+    screen.fill((255,255,255))
+    pygame.draw.rect(screen, (0,0,0),(screensize[0]/2,screensize[1]/2,1,1))
+    pygame.display.update()
+    pygame.event.pump()
+    event = pygame.event.get()
+    for thing in event:
+        if thing.type == pygame.VIDEORESIZE:
+            screen = pygame.display.set_mode(thing.dict['size'],pygame.RESIZABLE)
